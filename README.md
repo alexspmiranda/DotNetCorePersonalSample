@@ -5,11 +5,8 @@ using EntityFramework and Dependency Injection.
 To Start project correctly is necessary download DotNet Core SDK:
 https://www.microsoft.com/net/download
 
-----------------------------------------------------
-----------------------------------------------------
+
 ---------------- DATABASE MYSQL --------------------
-----------------------------------------------------
-----------------------------------------------------
 
 
 CREATE DATABASE ECOMMERCER;
@@ -23,7 +20,7 @@ CREATE TABLE PRODUCT_CLASS(
 
 
 CREATE TABLE PRODUCT(
-	ID_PRODUCT_ VARCHAR(50),
+	ID_PRODUCT INT PRIMARY KEY AUTO_INCREMENT ,
 	PRODUCT_NAME VARCHAR(255),
     ID_PRODUCT_CLASS INT,
     FOREIGN KEY (ID_PRODUCT_CLASS) REFERENCES PRODUCT_CLASS(ID_PRODUCT_CLASS)  

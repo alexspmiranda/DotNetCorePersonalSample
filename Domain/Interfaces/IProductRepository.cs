@@ -1,7 +1,10 @@
+using System.Collections.Generic;
+using Domain.Entity;
+
 namespace Domain.Interfaces
 {
     public interface IProductRepository
     {
-         int Get();
+         IEnumerable<Product> Get();
     }
 }

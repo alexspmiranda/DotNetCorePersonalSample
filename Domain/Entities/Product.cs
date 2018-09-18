@@ -2,9 +2,10 @@ namespace Domain.Entity
 {
     public class Product
     {
-        public string ProductName { get; }
+        public int IdProduct{get; set;}
+        public string ProductName { get; set;}
 
-        public int IdProductClass { get; }
+        public int IdProductClass { get; set; }
         
 //        public virtual int ProductClass{ get; }
     }

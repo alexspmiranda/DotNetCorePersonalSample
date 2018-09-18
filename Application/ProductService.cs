@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using Domain.Entity;
 using Domain.Interfaces;
 
 namespace Application
@@ -13,7 +15,7 @@ namespace Application
             _productRepository = productRepository;
         }
 
-        public int Get(){
+        public IEnumerable<Product> Get(){
             return _productRepository.Get();
         }
     }

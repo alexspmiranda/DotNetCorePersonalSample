@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Domain.Entity;
 using Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,7 +21,7 @@ namespace Projects.Controllers
 
         // GET api/values
         [HttpGet]
-        public ActionResult<int> Get()
+        public IEnumerable<Product> Get()
         {
             return _productService.Get();
         }

@@ -1,11 +1,18 @@
+using System.Collections.Generic;
+using Domain.Entity;
 using Domain.Interfaces;
 
 namespace Infrastructure.Repository
 {
     public class ProductRepository : IProductRepository
     {
-        public int Get(){
-            return 1;
+        private readonly DatabaseContext _context;
+        public ProductRepository(DatabaseContext context){
+            _context = context;
+        }
+
+        public IEnumerable<Product> Get(){
+            return _context.Product;
         }
     }
 }
